@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*int main()
+{
+    int maximo;
+    int minimo;
+    int acumulador;
+    int auxiliar;
+    int i;
+    int cero;
+
+    printf("ingrese un numero: ");
+    fflush(stdin);
+    scanf("%d", &auxiliar);
+    maximo= auxiliar;
+    minimo= auxiliar;
+    cero=auxiliar;
+    acumulador= auxiliar;
+
+
+    for(i=0;i<10;i++){
+
+
+    printf("ingrese un numero: ");
+    fflush(stdin);
+    scanf("%d", &auxiliar);
+    acumulador=acumulador+auxiliar;
+
+    if(auxiliar>maximo){
+        maximo=auxiliar;
+    }
+    if(auxiliar<minimo){
+
+        minimo=auxiliar;
+    }
+
+    if(auxiliar==0){
+        cero=auxiliar;
+    }
+
+    }
+    printf("El maximo es %d\n",maximo);
+    printf("El mimimo es %d\n",minimo);
+    printf("cantidad de ceros es %d\n",cero);
+    printf("El promedio es %f\n", ((float)acumulador) / 10);
+
+return 0;
+
+}*/
+
+
+
+int main(){
+    int contador=0;
+	int acumuladorPositivo=0;
+	int acumuladorNegativo=0;
+	int numero;
+	int contadorPositivos,contadorNegativos,contadorCeros,contadorPares=0;
+    char respuesta;
+
+
+
+    do{
+        printf("Ingrese un numero: ");
+        fflush(stdin);
+        scanf("%d", &numero);
+
+        if(numero>0){
+            contadorPositivos++;
+            acumuladorPositivo+numero;
+        }
+        if(numero<0){
+            contadorNegativos++;
+            acumuladorNegativo+numero;
+        }
+        if(numero==0){
+            contadorCeros++;
+        }
+
+
+
+        printf("desea continuar? ");
+        scanf("%c",&respuesta);
+
+
+    } while(respuesta=!'n');
+
+
+
+
+return 0;
+
+}
